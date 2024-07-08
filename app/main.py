@@ -19,10 +19,10 @@ class CarWashStation:
         self.average_rating = average_rating  # from 1.0 to 5.0
         self.count_of_ratings = count_of_ratings  # number of voting
 
-    """
-    returns income of CarWashStation for serving list of Car's
-    """
     def serve_cars(self, list_cars: list[Car]) -> float:
+        """
+        returns income of CarWashStation for serving list of Car's
+        """
         return round(sum([self.wash_single_car(car) for car in list_cars]), 1)
 
     """
